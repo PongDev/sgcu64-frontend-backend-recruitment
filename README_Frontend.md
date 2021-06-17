@@ -1,6 +1,6 @@
-# SGCU64 Frontend-Backend Recruitment
+# SGCU64 Frontend Recruitment
 
-แบบทดสอบทางวิศวกรรมซอฟต์แวร์ เพื่อสรรหาบุคคลเข้ารับตำแหน่ง Frontend-Backend Developer ประจำปีการศึกษา 2564
+แบบทดสอบทางวิศวกรรมซอฟต์แวร์ เพื่อสรรหาบุคคลเข้ารับตำแหน่ง Frontend Developer ประจำปีการศึกษา 2564
 
 # สารบัญ
 
@@ -47,4 +47,3 @@
 1. [Seven Segment](https://github.com/isd-sgcu/sgcu64-frontend-recruitment/tree/master/Problem%20%231)
 2. [Chula Chana](https://github.com/isd-sgcu/sgcu64-frontend-recruitment/tree/master/Problem%20%232)
 3. [มหาภัยพิบัติวันสิ้นโลก](https://github.com/isd-sgcu/sgcu64-frontend-recruitment/tree/master/Problem%20%233)
-4. [API](https://github.com/isd-sgcu/sgcu64-backend-recruitment/tree/master/Problem%20%233)

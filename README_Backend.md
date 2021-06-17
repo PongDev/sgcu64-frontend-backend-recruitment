@@ -1,6 +1,6 @@
-# SGCU64 Frontend-Backend Recruitment
+# SGCU64 Backend Recruitment
 
-แบบทดสอบทางวิศวกรรมซอฟต์แวร์ เพื่อสรรหาบุคคลเข้ารับตำแหน่ง Frontend-Backend Developer ประจำปีการศึกษา 2564
+แบบทดสอบทางวิศวกรรมซอฟต์แวร์ เพื่อสรรหาบุคคลเข้ารับตำแหน่ง Backend Developer ประจำปีการศึกษา 2564
 
 # สารบัญ
 
@@ -9,9 +9,9 @@
 
 # คำแนะนำ
 
-1. แบบทดสอบนี้ถูกออกแบบมาให้ทำเสร็จภายใน **120 ชั่วโมง (5 วัน)** อย่างไรก็ตามคณะกรรมการฯ จะให้เวลาในการทำทั้งหมด **168 ชั่วโมง (7 วัน)** หลังจากที่น้อง ๆ ได้รับบททดสอบนี้แล้ว เนื่องจากผู้สมัครบางท่านอาจจะมีช่วงเวลาที่สะดวกแตกต่างกันไป
+1. แบบทดสอบนี้ถูกออกแบบมาให้ทำเสร็จภายใน **72 ชั่วโมง (5 วัน)** อย่างไรก็ตามคณะกรรมการฯ จะให้เวลาในการทำทั้งหมด **168 ชั่วโมง (7 วัน)** หลังจากที่น้อง ๆ ได้รับบททดสอบนี้แล้ว เนื่องจากผู้สมัครบางท่านอาจจะมีช่วงเวลาที่สะดวกแตกต่างกันไป
 
-2. ให้ผู้สมัครทำการ Fork Repository [isd-sgcu/sgcu64-frontend-recruitment](https://github.com/isd-sgcu/sgcu64-frontend-recruitment) โดยใช้ Github Account ของผู้สมัครเอง โดยโจทย์แต่ข้อจะอยู่ในโฟลเดอร์ `Problem #<หมายเลขโจทย์>`
+2. ให้ผู้สมัครทำการ Fork Repository [isd-sgcu/sgcu64-backend-recruitment](https://github.com/isd-sgcu/sgcu64-backend-recruitment) โดยใช้ Github Account ของผู้สมัครเอง โดยโจทย์แต่ข้อจะอยู่ในโฟลเดอร์ `Problem #<หมายเลขโจทย์>`
 
 3. ในการส่งคำตอบ ให้ผู้สมัครอัพโหลดไฟล์ที่เกี่ยวข้องกับโจทย์ข้อนั้นทั้งหมดขึ้นไปบน Repository ที่ผู้สมัครได้ทำการ Fork ไว้ พร้อมจัดระเบียบไฟล์เหล่านั้นให้เรียบร้อย
 
@@ -44,7 +44,6 @@
 
 ผู้สมัครสามารถเข้าไปดูรายละเอียดของโจทย์ได้ที่นี่
 
-1. [Seven Segment](https://github.com/isd-sgcu/sgcu64-frontend-recruitment/tree/master/Problem%20%231)
-2. [Chula Chana](https://github.com/isd-sgcu/sgcu64-frontend-recruitment/tree/master/Problem%20%232)
-3. [มหาภัยพิบัติวันสิ้นโลก](https://github.com/isd-sgcu/sgcu64-frontend-recruitment/tree/master/Problem%20%233)
-4. [API](https://github.com/isd-sgcu/sgcu64-backend-recruitment/tree/master/Problem%20%233)
+1. [Seven Segment](https://github.com/isd-sgcu/sgcu64-backend-recruitment/tree/master/Problem%20%231)
+2. [Chula Chana](https://github.com/isd-sgcu/sgcu64-backend-recruitment/tree/master/Problem%20%232)
+3. [API](https://github.com/isd-sgcu/sgcu64-backend-recruitment/tree/master/Problem%20%233)
