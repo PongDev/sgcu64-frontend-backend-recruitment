@@ -70,3 +70,31 @@
 # Applicant Section
 
 ตั้งแต่ส่วนนี้ลงไป เป็นส่วนที่ผู้สมัครสามารถแก้ไขได้ตามอัธยาศัย ซึ่งอาจจะเป็นข้อสันนิษฐานหรือไอเดียเพิ่มเติมก็ได้
+
+วิธีการรันโปรแกรม
+
+Windows [Require Python3]
+
+- With Python Launcher And Python3
+  ```
+  py Problem1.py
+  ```
+- With Python3 Install With Alias "python"
+  ```
+  python Problem1.py
+  ```
+- With Python3 Install With Alias "python3"
+  ```
+  python3 Problem1.py
+  ```
+
+Linux [Require Python3]
+
+- With Python3 Install With Alias "python3"
+  ```
+  python3 Problem1.py
+  ```
+
+# More Idea
+- getTimeString() Function สามารถใช้ Regular Expression เขียนแทนได้ในส่วนเช็คความถูกต้องข้อมูล แต่ก็จะมีโอกาสผิดพลาดได้ง่ายกว่าหากเขียน Regular Expression ผิด
+- เห็นว่ามี package ของ python ชื่อ [colorama](https://pypi.org/project/colorama/) ที่สามารถใช้เลื่อน cursor ของ terminal ได้ (สำหรับนำไปใช้ในการ print เวลาใหม่ทับเวลาเก่า) แต่จะทำให้ต้อง install package เพิ่ม จะทำให้เกิดความยุ่งยากในการใช้งานโปรแกรมจึงละไว้ ณ ที่นี้ 
