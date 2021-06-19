@@ -98,3 +98,31 @@ Please input any number: 3
 # Applicant Section
 
 ตั้งแต่ส่วนนี้ลงไป เป็นส่วนที่ผู้สมัครสามารถแก้ไขได้ตามอัธยาศัย ซึ่งอาจจะเป็นข้อสันนิษฐานหรือไอเดียเพิ่มเติมก็ได้
+
+วิธีการรันโปรแกรม
+
+Windows [Require Python3]
+
+- With Python Launcher And Python3
+  ```
+  py Problem2.py
+  ```
+- With Python3 Install With Alias "python"
+  ```
+  python Problem2.py
+  ```
+- With Python3 Install With Alias "python3"
+  ```
+  python3 Problem2.py
+  ```
+
+Linux [Require Python3]
+
+- With Python3 Install With Alias "python3"
+  ```
+  python3 Problem2.py
+  ```
+
+# Addtional Idea:
+
+- การเก็บข้อมูล สามารถเก็บไว้ใน Database แทนได้ พบว่า python มี package ชื่อ [tinydb](https://pypi.org/project/tinydb/) ที่เป็น file database แบบ document oriented เก็บใน json ได้

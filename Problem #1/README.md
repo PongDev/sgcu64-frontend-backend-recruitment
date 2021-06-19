@@ -95,6 +95,7 @@ Linux [Require Python3]
   python3 Problem1.py
   ```
 
-# More Idea
+# Addtional Idea:
+
 - getTimeString() Function สามารถใช้ Regular Expression เขียนแทนได้ในส่วนเช็คความถูกต้องข้อมูล แต่ก็จะมีโอกาสผิดพลาดได้ง่ายกว่าหากเขียน Regular Expression ผิด
-- เห็นว่ามี package ของ python ชื่อ [colorama](https://pypi.org/project/colorama/) ที่สามารถใช้เลื่อน cursor ของ terminal ได้ (สำหรับนำไปใช้ในการ print เวลาใหม่ทับเวลาเก่า) แต่จะทำให้ต้อง install package เพิ่ม จะทำให้เกิดความยุ่งยากในการใช้งานโปรแกรมจึงละไว้ ณ ที่นี้ 
+- เห็นว่ามี package ของ python ชื่อ [colorama](https://pypi.org/project/colorama/) ที่สามารถใช้เลื่อน cursor ของ terminal ได้ (สำหรับนำไปใช้ในการ print เวลาใหม่ทับเวลาเก่า) แต่จะทำให้ต้อง install package เพิ่ม จะทำให้เกิดความยุ่งยากในการใช้งานโปรแกรมจึงละไว้ ณ ที่นี้
