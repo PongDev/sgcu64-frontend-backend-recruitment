@@ -1,0 +1,179 @@
+swagger: "2.0"
+info:
+  description: "Employee Management System For HR."
+  version: "1.0.0"
+  title: "Employee Management System"
+host: "www.example.com"
+basePath: "/api"
+tags:
+- name: "user"
+  description: "All action about user"
+schemes:
+- "https"
+paths:
+  /user:
+    post:
+      tags:
+      - "user"
+      summary: "Add new user to database"
+      description: ""
+      operationId: "addUser"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "User Object To Add"
+        required: true
+        schema:
+          $ref: "#/definitions/User"
+      responses:
+        "201":
+          description: "Add User Success"
+        "400":
+          description: "Invalid Input"
+    get:
+      tags:
+      - "user"
+      summary: "Get all user"
+      description: ""
+      operationId: "getAllUser"
+      produces:
+      - "application/json"
+      parameters: []
+      responses:
+        "200":
+          description: "Get All User Data"
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/UserData"
+  /user/{id}:
+    get:
+      tags:
+      - "user"
+      summary: "Get user by id"
+      description: ""
+      operationId: "getUserByID"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "id"
+        in: "path"
+        description: "ID To Find User Data"
+        required: true
+        type: "string"
+      responses:
+        "200":
+          description: "Get User Success"
+          schema:
+            $ref: "#/definitions/UserData"
+        "404":
+          description: "User Not Found"
+    put:
+      tags:
+      - "user"
+      summary: "Update user by id"
+      description: ""
+      operationId: "updateUser"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "id"
+        in: "path"
+        description: "User ID To Update"
+        required: true
+        type: "string"
+      - in: "body"
+        name: "body"
+        description: "User Data To Update"
+        required: true
+        schema:
+          $ref: "#/definitions/User"
+      responses:
+        "200":
+          description: "Update User Success"
+        "404":
+          description: "User Not Found"
+    delete:
+      tags:
+      - "user"
+      summary: "Delete user"
+      description: ""
+      operationId: "deleteUser"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "id"
+        in: "path"
+        description: "User ID To Delete"
+        required: true
+        type: "string"
+      responses:
+        "200":
+          description: "Delete User Success"
+        "404":
+          description: "User Not Found"
+  /user/search:
+    get:
+      tags:
+      - "user"
+      summary: "Search user by name, surname or role"
+      description: ""
+      operationId: "searchUser"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "User Search Data"
+        required: true
+        schema:
+          $ref: "#/definitions/UserSearch"
+      responses:
+        "200":
+          description: "User Data List"
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/UserData"
+definitions:
+  User:
+    type: "object"
+    properties:
+      id:
+        type: "string"
+      password:
+        type: "string"
+      firstName:
+        type: "string"
+      lastName:
+        type: "string"
+      salary:
+        type: "number"
+      role:
+        type: "string"
+  UserData:
+    type: "object"
+    properties:
+      id:
+        type: "string"
+      firstName:
+        type: "string"
+      lastName:
+        type: "string"
+      salary:
+        type: "number"
+      role:
+        type: "string"
+  UserSearch:
+    type: "object"
+    properties:
+      firstName:
+        type: "string"
+      lastName:
+        type: "string"
+      role:
+        type: "string"

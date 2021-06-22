@@ -131,3 +131,6 @@ Swagger UI
 # Applicant Section
 
 ตั้งแต่ส่วนนี้ลงไป เป็นส่วนที่ผู้สมัครสามารถแก้ไขได้ตามอัธยาศัย ซึ่งอาจจะเป็นข้อสันนิษฐานหรือไอเดียเพิ่มเติมก็ได้
+
+วิธีการเข้าดู API Endpoints ที่ออกแบบไว้
+Import File swagger.yaml [เข้าไปที่นี่](https://editor.swagger.io/)
