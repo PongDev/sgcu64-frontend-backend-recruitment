@@ -34,10 +34,14 @@ paths:
           description: "Add User Success"
         "400":
           description: "Invalid Input"
+        "401":
+          description: "Unauthorized"
+      security:
+      - APIKeyHeader: []
     get:
       tags:
       - "user"
-      summary: "Get all user"
+      summary: "Get all user data"
       description: ""
       operationId: "getAllUser"
       produces:
@@ -45,11 +49,34 @@ paths:
       parameters: []
       responses:
         "200":
-          description: "Get All User Data"
+          description: "Get All User Data Success"
           schema:
             type: "array"
             items:
               $ref: "#/definitions/UserData"
+        "401":
+          description: "Unauthorized"
+      security:
+      - APIKeyHeader: []
+  /user/data:
+    get:
+      tags:
+      - "user"
+      summary: "Get current login user data"
+      description: ""
+      operationId: "getCurrentUserData"
+      produces:
+      - "application/json"
+      parameters: []
+      responses:
+        "200":
+          description: "Get Current Login User Data Success"
+          schema:
+            $ref: "#/definitions/UserData"
+        "401":
+          description: "Unauthorized"
+      security:
+      - APIKeyHeader: []
   /user/{id}:
     get:
       tags:
@@ -70,8 +97,12 @@ paths:
           description: "Get User Success"
           schema:
             $ref: "#/definitions/UserData"
+        "401":
+          description: "Unauthorized"
         "404":
           description: "User Not Found"
+      security:
+      - APIKeyHeader: []
     put:
       tags:
       - "user"
@@ -95,8 +126,12 @@ paths:
       responses:
         "200":
           description: "Update User Success"
+        "401":
+          description: "Unauthorized"
         "404":
           description: "User Not Found"
+      security:
+      - APIKeyHeader: []
     delete:
       tags:
       - "user"
@@ -114,8 +149,12 @@ paths:
       responses:
         "200":
           description: "Delete User Success"
+        "401":
+          description: "Unauthorized"
         "404":
           description: "User Not Found"
+      security:
+      - APIKeyHeader: []
   /user/search:
     get:
       tags:
@@ -134,11 +173,98 @@ paths:
           $ref: "#/definitions/UserSearch"
       responses:
         "200":
-          description: "User Data List"
+          description: "Get User Data List Success"
           schema:
             type: "array"
             items:
               $ref: "#/definitions/UserData"
+        "401":
+          description: "Unauthorized"
+      security:
+      - APIKeyHeader: []
+  /user/login:
+    post:
+      tags:
+      - "user"
+      summary: "User login"
+      description: ""
+      operationId: "userLogin"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "id"
+        in: "query"
+        description: "User ID To Login"
+        required: true
+        type: "string"
+      - name: "password"
+        in: "query"
+        description: "User Password To Login"
+        required: true
+        type: "string"
+      responses:
+        "200":
+          description: "Login Success"
+          schema:
+            type: "string"
+          headers:
+            X-Expires-After:
+              type: "string"
+              format: "date-time"
+              description: "API Key Expire Date"
+        "400":
+          description: "Invalid ID Or Password"
+  /user/logout:
+    get:
+      tags:
+      - "user"
+      summary: "User Logout"
+      description: ""
+      operationId: "userLogout"
+      produces:
+      - "application/json"
+      parameters: []
+      responses:
+        "200":
+          description: "Logout Success"
+        "401":
+          description: "Unauthorized"
+      security:
+      - APIKeyHeader: []
+  /user/changepassword:
+    put:
+      tags:
+      - "user"
+      summary: "Update User Password"
+      description: ""
+      operationId: "changePassword"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "current_password"
+        in: "query"
+        description: "User Current Password"
+        required: true
+        type: "string"
+      - name: "new_password"
+        in: "query"
+        description: "User New Password"
+        required: true
+        type: "string"
+      responses:
+        "200":
+          description: "Change User Password Success"
+        "400":
+          description: "Wrong Password"
+        "401":
+          description: "Unauthorized"
+      security:
+      - APIKeyHeader: []
+securityDefinitions:
+  APIKeyHeader:
+    type: "apiKey"
+    name: "X-API-Key"
+    in: "header"
 definitions:
   User:
     type: "object"

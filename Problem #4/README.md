@@ -120,11 +120,12 @@ HR
       - Status Code: 400 Bad Request
 
 #### ทำแบบ Swagger (Spec ที่แสดงอาจไม่ตรงกับ UI ยกมาเพื่อให้เห็นภาพเฉย ๆ)
-![image](https://user-images.githubusercontent.com/24814968/121923165-db069f00-cd64-11eb-9098-539c2e1734a9.png)  
+
+![image](https://user-images.githubusercontent.com/24814968/121923165-db069f00-cd64-11eb-9098-539c2e1734a9.png)
 
 OpenAPI Spec
 
-![image](https://user-images.githubusercontent.com/24814968/121923206-e5289d80-cd64-11eb-950d-8391bcdc27e0.png)  
+![image](https://user-images.githubusercontent.com/24814968/121923206-e5289d80-cd64-11eb-950d-8391bcdc27e0.png)
 
 Swagger UI
 
@@ -134,3 +135,19 @@ Swagger UI
 
 วิธีการเข้าดู API Endpoints ที่ออกแบบไว้
 Import File swagger.yaml [เข้าไปที่นี่](https://editor.swagger.io/)
+
+การออกแบบการทำงาน
+
+- ใช้ HTTPS เพื่อป้องกันการโจมตี Man In The Middle
+- เริ่มแรก User ต้อง Login ก่อน เพื่อที่จะได้ API Key ของ User นั้นๆมาใช้งาน
+- หลังจากนั้น API Key จะเป็นตัวกำหนดสิทธิว่า User เป็น Employee หรือว่าเป็น HR โดยจะทำการเช็คผ่านฝั่ง Backend เมื่อมีการเรียกใช้ API ต่างๆ
+- API Key ของ HR จะสามารถ Access สิทธิต่างๆ ได้ทั้งหมด
+- API Key ของ Employee จะสามารถ Access สิทธิในการ
+
+  - logout (/user/logout)
+  - แก้ password ของตัวเอง (/user/changepassword)
+  - ดูข้อมูลของตัวเองได้ (/user/data)
+
+  ได้เพียงเท่านั้น (เนื่องจาก login ไม่ต้องใช้ API Key จึงไม่ได้อยู่ในรายการสิทธิ)
+
+- สำหรับการดูข้อมูล User จะไม่ได้ส่ง Password มาด้วย เนื่องจากการออกแบบระบบที่ดี Password จะไม่ถูกเก็บในรูปแบบ Plain Text แต่จะถูกเติม Salt แล้วนำไป Hash เก็บไว้ การส่งค่า Password ที่ถูก Hash ไว้กลับมาจึงไม่มีประโยชน์อันใด
