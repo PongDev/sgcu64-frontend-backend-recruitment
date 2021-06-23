@@ -47,3 +47,9 @@
 # Applicant Section
 
 ตั้งแต่ส่วนนี้ลงไป เป็นส่วนที่ผู้สมัครสามารถแก้ไขได้ตามอัธยาศัย ซึ่งอาจจะเป็นข้อสันนิษฐานหรือไอเดียเพิ่มเติมก็ได้
+
+# Addtional Idea:
+
+- ในการ Validate ข้อมูลเพิ่มเติม สามารถใช้ Regular Expression ช่วยได้
+- input type="email" ใน HTML5 สามารถ Validate Email ได้ในระดับหนึ่ง แต่เพื่อ Validate รูปแบบอื่นๆเพิ่มเติมจึงได้ใช้ Regular Expression เพิ่มเติมไปด้วย โดย Regular Expression ที่นำมาใช้ในที่นี้ ใช้รูปแบบ RFC 2822 standard email validation อ้างอิงจาก[ที่นี่](https://www.w3resource.com/javascript/form/email-validation.php)
+- สามารถใช้ Popup Box แทนที่ Alert เวลาแสดง Error ต่างๆ ได้

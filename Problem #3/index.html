@@ -17,30 +17,32 @@
     </div>
     <div class="content">
       <!-- USER CODE BEGIN: Control image -->
-      <img class="kite" />
-      <img class="cloud cloud1" />
-      <img class="cloud cloud2" />
-      <img class="cloud cloud3" />
+      <div class="kite cloud" style="width: 65%;">
+        <img class="kite" src="assets/img/kite.png" />
+        <img class="cloud cloud1" src="assets/img/cloud1.png" />
+        <img class="cloud cloud2" src="assets/img/cloud2.png" />
+        <img class="cloud cloud3" src="assets/img/cloud3.png" />
+      </div>
       <!-- USER CODE BEGIN: Control image -->
       <div class="register-card">
         <h1 class="title">ลงทะเบียน</h1>
         <p class="subtitle">กรุณากรอกข้อมูลให้ครบถ้วน</p>
         <form id="register-form">
-          <input name="name" placeholder="ชื่อ" />
-          <input name="lastname" placeholder="นามสกุล" />
-          <input name="username" placeholder="ชื่อผู้ใช้" />
-          <input name="email" type="email" placeholder="อีเมล" />
-          <input name="password" type="password" placeholder="รหัสผ่าน" />
-          <input name="confirmpassword" type="password" placeholder="ยืนยันรหัสผ่าน" />
+          <input name="name" placeholder="ชื่อ" required/>
+          <input name="lastname" placeholder="นามสกุล" required/>
+          <input name="username" placeholder="ชื่อผู้ใช้" required/>
+          <input name="email" type="email" placeholder="อีเมล" required/>
+          <input name="password" type="password" placeholder="รหัสผ่าน" required/>
+          <input name="confirmpassword" type="password" placeholder="ยืนยันรหัสผ่าน" required/>
           <button type="submit">Submit</button>
         </form>
       </div>
     </div>
     <div class="footer">
       <!-- USER CODE BEGIN: Navigate social media -->
-      <a><img class="contact-logo" src="assets/img/ig-logo.svg" /></a>
-      <a><img class="contact-logo" src="assets/img/fb-logo.svg" /></a>
-      <a><img class="contact-logo" src="assets/img/twitter-logo.svg" /></a>
+      <a href="https://www.instagram.com/"><img class="contact-logo" src="assets/img/ig-logo.svg" /></a>
+      <a href="https://www.facebook.com/"><img class="contact-logo" src="assets/img/fb-logo.svg" /></a>
+      <a href="https://twitter.com/"><img class="contact-logo" src="assets/img/twitter-logo.svg" /></a>
       <!-- USER CODE END: Navigate social media -->
     </div>
   </body>

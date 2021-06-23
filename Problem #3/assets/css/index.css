@@ -27,7 +27,10 @@ body {
 
 .register-card {
   /* USER CODE Begin: Style the card */
-
+  background-color: #ffffff;
+  border-radius: 5px;
+  text-align: center;
+  width: 80%;
   /* USER CODE End: Style the card */
 }
 
@@ -49,7 +52,9 @@ body {
 
 input {
   /* USER CODE Begin: Style the input field */
-
+  border-radius: 5px;
+  margin: 8px 0px;
+  width: 80%;
   /* USER CODE END: Style the input field */
 }
 
@@ -64,7 +69,10 @@ input:focus {
 
 button {
   /* USER CODE Begin: Style the button */
-
+  margin-top: 8px;
+  width: calc(80% + 8px);
+  background-color: var(--chula-pink);
+  color: white;
   /* USER CODE END: Style the button */
 }
 
@@ -76,7 +84,7 @@ button:hover {
 .cloud,
 .footer {
   /* USER CODE Begin: Hide it */
-
+  display: none;
   /* USER CODE END: Hide it  */
 }
 
@@ -87,7 +95,7 @@ button:hover {
 }
 
 /* USER CODE Begin: Manage screen width */
-@media screen and (min-width: 0px) {
+@media screen and (min-width: 1000px) {
   /* USER CODE END: Manage screen width */
   body {
     background: url("../img/bg-desktop.svg");
@@ -112,37 +120,42 @@ button:hover {
 
   .kite {
     /* USER CODE Begin: Control kite */
-
+    position: absolute;
+    display: block;
+    z-index: -1;
     /* USER CODE END: Control kite */
   }
 
   .cloud {
     /* USER CODE Begin: Style cloud */
-
+    position: relative;
+    display: block;
+    z-index: -2;
     /* USER CODE END: Style kite */
   }
 
   .cloud.cloud1 {
     /* USER CODE Begin: Control cloud1 */
-
+    margin-right: auto;
     /* USER CODE END: Control cloud1 */
   }
 
   .cloud.cloud2 {
     /* USER CODE Begin: Control cloud2 */
-
+    margin-left: auto;
     /* USER CODE END: Control cloud2 */
   }
 
   .cloud.cloud3 {
     /* USER CODE Begin: Control cloud3*/
-
+    margin-right: auto;
     /* USER CODE END: Control cloud3 */
   }
 
   input {
     /* USER CODE Begin: Style the input field */
-
+    border-radius: 5px;
+    margin: 8px 0px;
     /* USER CODE END: Style the input field */
   }
 
